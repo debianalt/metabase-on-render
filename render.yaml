@@ -4,9 +4,6 @@ services:
     env: docker
     plan: free
     autoDeploy: true
-    startCommand: java $JAVA_OPTS -jar /app/metabase.jar
-    envVars:
-      - key: JAVA_OPTS
-        value: "-Xmx256m -Xms256m"
+    startCommand: java -Xmx256m -Xms256m -jar /app/metabase.jar
     ports:
       - port: 3000
