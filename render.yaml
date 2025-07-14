@@ -2,8 +2,8 @@ services:
   - type: web
     name: metabase
     env: docker
-    plan: free
+    plan: starter
     autoDeploy: true
-    startCommand: java -Xmx256m -Xms256m -jar /app/metabase.jar
+    startCommand: java -Xmx2048m -Xms1024m -jar /app/metabase.jar
     ports:
       - port: 3000
